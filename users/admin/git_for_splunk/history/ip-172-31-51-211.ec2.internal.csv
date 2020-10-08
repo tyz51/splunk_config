@@ -339,3 +339,4 @@ sid,search,"splunk_server","_time","is_realtime",provenance,"api_et","api_lt","e
 |  fields - percent
 | rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145459.662902",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
 "rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145472.187","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145454 latest=1602145455","ip-172-31-51-211.ec2.internal","1602145472.865690",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145481.188","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145462 latest=1602145463","ip-172-31-51-211.ec2.internal","1602145481.523282",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
