@@ -1,0 +1,340 @@
+sid,search,"splunk_server","_time","is_realtime",provenance,"api_et","api_lt","event_count","exec_time","result_count","savedsearch_name","scan_count","search_et","search_lt",status,"total_run_time","__mv_sid","__mv_search","__mv_splunk_server","__mv__time","__mv_is_realtime","__mv_provenance","__mv_api_et","__mv_api_lt","__mv_event_count","__mv_exec_time","__mv_result_count","__mv_savedsearch_name","__mv_scan_count","__mv_search_et","__mv_search_lt","__mv_status","__mv_total_run_time"
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602079868.4","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602079868.651732",0,"UI:Dashboard:status","1601474400.000000000","1602079868.000000000",0,1602079868,0,search3,0,"1601474400.000000000","1602079868.000000000",completed,"0.234",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602079868.3","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602079868.654470",0,"UI:Dashboard:status","1601474400.000000000","1602079868.000000000",0,1602079868,0,search1,0,"1601474400.000000000","1602079868.000000000",completed,"0.23800000000000002",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602079930.7","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602079930.830518",0,"UI:Dashboard:status","1601474400.000000000","1602079930.000000000",0,1602079930,0,search3,0,"1601474400.000000000","1602079930.000000000",completed,"0.186",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602079930.8","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602079930.832688",0,"UI:Dashboard:status","1601474400.000000000","1602079930.000000000",0,1602079930,0,search1,0,"1601474400.000000000","1602079930.000000000",completed,"0.177",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602079943.9","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602079943.978992",0,"UI:Dashboard:status",,,0,1602079943,0,search1,0,,,completed,"0.122",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602079943.10","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602079943.989827",0,"UI:Dashboard:status",,,0,1602079944,0,search3,0,,,completed,"0.115",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602080004.11","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602080004.107648",0,"UI:Dashboard:status","1601474400.000000000","1602080004.000000000",0,1602080004,0,search1,0,"1601474400.000000000","1602080004.000000000",completed,"0.269",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602080004.12","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602080004.108498",0,"UI:Dashboard:status","1601474400.000000000","1602080004.000000000",0,1602080004,0,search3,0,"1601474400.000000000","1602080004.000000000",completed,"0.272",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602080070.15","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602080070.100316",0,"UI:Dashboard:status","1601474400.000000000","1602080070.000000000",0,1602080070,0,search1,0,"1601474400.000000000","1602080070.000000000",completed,"0.1",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602080070.16","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602080070.171021",0,"UI:Dashboard:status","1601474400.000000000","1602080070.000000000",0,1602080070,0,search3,0,"1601474400.000000000","1602080070.000000000",completed,"0.093",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085124.28","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085124.296799",0,"UI:Dashboard:status","1601478000.000000000","1602085124.000000000",27,1602085124,0,search3,27,"1601478000.000000000","1602085124.000000000",canceled,"0.454",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085124.29","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085124.299133",0,"UI:Dashboard:status","1601478000.000000000","1602085124.000000000",27,1602085124,27,search1,27,"1601478000.000000000","1602085124.000000000",completed,"0.466",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085145.30","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085145.193484",0,"UI:Dashboard:status","1601478000.000000000","1602085145.000000000",31,1602085145,0,search3,31,"1601478000.000000000","1602085145.000000000",completed,"0.289",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085161.31","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085120 latest=1602085121","ip-172-31-51-211.ec2.internal","1602085161.347384",0,"UI:Dashboard:status","1601478000.000000000","1602085161.000000000",1,1602085161,1,search2,1,"1602085120.000000000","1602085121.000000000",canceled,"0.28500000000000003",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085162.32","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085095 latest=1602085096","ip-172-31-51-211.ec2.internal","1602085162.533169",0,"UI:Dashboard:status","1601478000.000000000","1602085162.000000000",1,1602085162,1,search2,1,"1602085095.000000000","1602085096.000000000",completed,"0.061",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085376.35","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085376.591738",0,"UI:Dashboard:status","1601478000.000000000","1602085376.000000000",40,1602085376,40,search1,40,"1601478000.000000000","1602085376.000000000",completed,"0.353",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085376.36","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085376.596293",0,"UI:Dashboard:status","1601478000.000000000","1602085376.000000000",40,1602085376,0,search3,40,"1601478000.000000000","1602085376.000000000",completed,"0.338",,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_rt_1602085396.40","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085396.007451",1,"UI:Dashboard:status",,,0,1602085396,0,search1,1,,,canceled,"12.127",,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_rt_1602085396.41","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085396.036481",1,"UI:Dashboard:status",,,1,1602085396,0,search3,1,,,canceled,"12.116",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085403.42","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085403.682058",0,"UI:Dashboard:status","1602084503.000000000","1602085403.000000000",40,1602085403,40,search1,40,"1602084503.000000000","1602085403.000000000",completed,"0.322",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085403.43","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085403.718027",0,"UI:Dashboard:status","1602084503.000000000","1602085403.000000000",40,1602085403,0,search3,40,"1602084503.000000000","1602085403.000000000",completed,"0.292",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085485.45","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085155 latest=1602085156","ip-172-31-51-211.ec2.internal","1602085485.097467",0,"UI:Dashboard:status","1602084585.000000000","1602085485.000000000",1,1602085485,1,search2,1,"1602085155.000000000","1602085156.000000000",completed,"0.099",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085611.46","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085611.072452",0,"UI:Dashboard:status","1601478000.000000000","1602085611.000000000",43,1602085611,43,search1,43,"1601478000.000000000","1602085611.000000000",canceled,"0.445",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085611.47","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085611.086318",0,"UI:Dashboard:status","1601478000.000000000","1602085611.000000000",43,1602085611,0,search3,43,"1601478000.000000000","1602085611.000000000",completed,"0.433",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085627.48","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085627.836923",0,"UI:Dashboard:status","1601478000.000000000","1602085627.000000000",45,1602085627,45,search1,45,"1601478000.000000000","1602085627.000000000",canceled,"0.298",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085632.49","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085632.866895",0,"UI:Dashboard:status","1601478000.000000000","1602085632.000000000",46,1602085632,46,search1,46,"1601478000.000000000","1602085632.000000000",completed,"0.169",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085643.50","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085629 latest=1602085630","ip-172-31-51-211.ec2.internal","1602085643.392510",0,"UI:Dashboard:status","1601478000.000000000","1602085643.000000000",1,1602085643,1,search2,1,"1602085629.000000000","1602085630.000000000",completed,"0.146",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085700.51","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085700.326870",0,"UI:Dashboard:status","1601478000.000000000","1602085700.000000000",51,1602085700,51,search1,51,"1601478000.000000000","1602085700.000000000",canceled,"0.333",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085700.52","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085700.338739",0,"UI:Dashboard:status","1601478000.000000000","1602085700.000000000",51,1602085700,0,search3,51,"1601478000.000000000","1602085700.000000000",canceled,"0.314",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085711.53","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085711.314852",0,"UI:Dashboard:status","1602084811.000000000","1602085711.000000000",52,1602085711,52,search1,52,"1602084811.000000000","1602085711.000000000",completed,"0.329",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085711.54","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085711.338024",0,"UI:Dashboard:status","1602084811.000000000","1602085711.000000000",52,1602085711,0,search3,52,"1602084811.000000000","1602085711.000000000",completed,"0.318",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085799.57","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085799.595269",0,"UI:Dashboard:status","1601478000.000000000","1602085799.000000000",61,1602085799,61,search1,61,"1601478000.000000000","1602085799.000000000",completed,"0.337",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085799.58","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085799.612448",0,"UI:Dashboard:status","1601478000.000000000","1602085799.000000000",61,1602085799,0,search3,61,"1601478000.000000000","1602085799.000000000",completed,"0.336",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085804.59","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085798 latest=1602085799","ip-172-31-51-211.ec2.internal","1602085804.040394",0,"UI:Dashboard:status","1601478000.000000000","1602085804.000000000",1,1602085804,1,search2,1,"1602085798.000000000","1602085799.000000000",canceled,"0.061",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085805.60","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085787 latest=1602085788","ip-172-31-51-211.ec2.internal","1602085805.022175",0,"UI:Dashboard:status","1601478000.000000000","1602085805.000000000",1,1602085805,1,search2,1,"1602085787.000000000","1602085788.000000000",canceled,"0.059000000000000004",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085809.63","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085798 latest=1602085799","ip-172-31-51-211.ec2.internal","1602085809.466277",0,"UI:Dashboard:status","1601478000.000000000","1602085809.000000000",1,1602085809,1,search2,1,"1602085798.000000000","1602085799.000000000",completed,"0.14200000000000002",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602085879.64","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602085879.490447",0,"UI:Dashboard:status","1601478000.000000000","1602085879.000000000",68,1602085879,68,search1,68,"1601478000.000000000","1602085879.000000000",completed,"0.339",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602085879.65","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602085879.493979",0,"UI:Dashboard:status","1601478000.000000000","1602085879.000000000",68,1602085879,0,search3,68,"1601478000.000000000","1602085879.000000000",completed,"0.329",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602085886.66","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085867 latest=1602085868","ip-172-31-51-211.ec2.internal","1602085886.417494",0,"UI:Dashboard:status","1601478000.000000000","1602085886.000000000",1,1602085886,1,search2,1,"1602085867.000000000","1602085868.000000000",completed,"0.063",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602144835.173","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602144835.325065",0,"UI:Dashboard:status","1601539200.000000000","1602144835.000000000",68,1602144835,68,search1,68,"1601539200.000000000","1602144835.000000000",canceled,"0.442",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602144843.175","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602144843.292006",0,"UI:Dashboard:status","1601539200.000000000","1602144843.000000000",68,1602144843,68,search1,68,"1601539200.000000000","1602144843.000000000",completed,"0.34",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602144843.176","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602144843.296865",0,"UI:Dashboard:status","1601539200.000000000","1602144843.000000000",68,1602144843,0,search3,68,"1601539200.000000000","1602144843.000000000",completed,"0.336",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602144846.177","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085798 latest=1602085799","ip-172-31-51-211.ec2.internal","1602144846.585756",0,"UI:Dashboard:status","1601539200.000000000","1602144846.000000000",1,1602144846,1,search2,1,"1602085798.000000000","1602085799.000000000",canceled,"0.073",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602144847.178","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085867 latest=1602085868","ip-172-31-51-211.ec2.internal","1602144847.462236",0,"UI:Dashboard:status","1601539200.000000000","1602144847.000000000",1,1602144847,1,search2,1,"1602085867.000000000","1602085868.000000000",completed,"0.061",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602145416.180","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085867 latest=1602085868","ip-172-31-51-211.ec2.internal","1602145416.839565",0,"UI:Dashboard:status","1602144516.000000000","1602145416.000000000",1,1602145416,1,search2,1,"1602085867.000000000","1602085868.000000000",completed,"0.419",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602145416.181","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145416.848289",0,"UI:Dashboard:status","1602144516.000000000","1602145416.000000000",0,1602145416,0,search3,0,"1602144516.000000000","1602145416.000000000",completed,"0.37",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602145416.182","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145416.850738",0,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602145444.183","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145444.177772",0,"UI:Dashboard:status","1601539200.000000000","1602145444.000000000",68,1602145444,68,search1,68,"1601539200.000000000","1602145444.000000000",completed,"0.666",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602145444.184","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145444.183031",0,"UI:Dashboard:status","1601539200.000000000","1602145444.000000000",68,1602145444,0,search3,68,"1601539200.000000000","1602145444.000000000",completed,"0.674",,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_rt_1602145459.185","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145459.641530",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_rt_1602145459.186","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145459.662902",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,

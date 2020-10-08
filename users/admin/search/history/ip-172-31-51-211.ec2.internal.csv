@@ -1,0 +1,12 @@
+sid,search,"splunk_server","_time","is_realtime",provenance,"event_count","exec_time","result_count","scan_count",status,"total_run_time","api_et","api_lt","search_et","search_lt","savedsearch_name","__mv_sid","__mv_search","__mv_splunk_server","__mv__time","__mv_is_realtime","__mv_provenance","__mv_event_count","__mv_exec_time","__mv_result_count","__mv_scan_count","__mv_status","__mv_total_run_time","__mv_api_et","__mv_api_lt","__mv_search_et","__mv_search_lt","__mv_savedsearch_name"
+"rt_md_1602055756.3","| metadata type=sourcetypes | search totalCount > 0","ip-172-31-51-211.ec2.internal","1602055756.340527",1,"UI:Search",0,1602055756,0,0,failed,"7529.360000000001",,,,,,,,,,,,,,,,,,,,,,
+"1602063267.14","| mcatalog values(metric_name) as metrics WHERE NOT (""_dims""=""rollup_aggregate"" OR ""_dims""=""rollup_span"" OR ""_dims""=""rollup_source_index"") AND (""index""=""*"" OR ""index""=""_*"" ) BY index
+    | mvexpand metrics limit=20000
+    | stats values(index) as indexes by metrics","ip-172-31-51-211.ec2.internal","1602063267.833531",0,,492,1602063267,248,492,completed,"0.076","1601976867.000000000","1602063267.000000000","1601976867.000000000","1602063267.000000000",,,,,,,,,,,,,,,,,,
+"1602068170.22","| mcatalog values(metric_name) as metrics WHERE NOT (""_dims""=""rollup_aggregate"" OR ""_dims""=""rollup_span"" OR ""_dims""=""rollup_source_index"") AND (""index""=""*"" OR ""index""=""_*"" ) BY index
+    | mvexpand metrics limit=20000
+    | stats values(index) as indexes by metrics","ip-172-31-51-211.ec2.internal","1602068170.117598",0,,561,1602068170,248,561,completed,"0.07","1601981770.000000000","1602068170.000000000","1601981770.000000000","1602068170.000000000",,,,,,,,,,,,,,,,,,
+"rt_md_1602077764.36","| metadata type=sourcetypes | search totalCount > 0","ip-172-31-51-211.ec2.internal","1602077764.557434",1,"UI:Search",0,1602077764,0,0,failed,"594.155",,,,,,,,,,,,,,,,,,,,,,
+"rt_md_1602085030.23","| metadata type=sourcetypes | search totalCount > 0","ip-172-31-51-211.ec2.internal","1602085030.892155",1,"UI:Search",0,1602085031,0,0,failed,"38.076",,,,,,,,,,,,,,,,,,,,,,
+"admin__admin__search__search1_1602085079.26","search thert","ip-172-31-51-211.ec2.internal","1602085079.746075",0,"UI:Dashboard:test",0,1602085079,0,0,canceled,"0.198",,,,,search1,,,,,,,,,,,,,,,,,
+"admin__admin__search__search1_1602085080.27","search thert","ip-172-31-51-211.ec2.internal","1602085080.168905",0,"UI:Dashboard:test",0,1602085080,0,0,completed,"0.106",,,,,search1,,,,,,,,,,,,,,,,,

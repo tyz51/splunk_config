@@ -1,0 +1,15 @@
+[history/.dummy_history]
+version = 8.0.6
+modtime = 1602055756.340232000
+
+[ui-tour/search-tour]
+version = 8.0.6
+modtime = 1602055758.732788000
+
+[ui-tour/dashboards-tour%3Aenterprise]
+version = 8.0.6
+modtime = 1602070178.499606000
+
+[views/test]
+version = 8.0.6
+modtime = 1602085086.445790000

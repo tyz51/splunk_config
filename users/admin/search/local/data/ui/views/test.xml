@@ -1,0 +1,16 @@
+<dashboard>
+  <label>TEST</label>
+  <description>Bla-bla-bla</description>
+  <row>
+    <panel>
+      <event>
+        <search>
+          <query>thert</query>
+          <earliest>$earliest$</earliest>
+          <latest>$latest$</latest>
+        </search>
+        <option name="list.drilldown">none</option>
+      </event>
+    </panel>
+  </row>
+</dashboard>

@@ -1,0 +1,1625 @@
+/opt/splunk/etc/system/default/transforms.conf                         [access-extractions]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[[nspaces:clientip]]\s++[[nspaces:ident]]\s++[[nspaces:user]]\s++[[sbstring:req_time]]\s++[[access-request]]\s++[[nspaces:status]]\s++[[nspaces:bytes]](?:\s++"(?<referer>[[bc_domain:referer_]]?+[^"]*+)"(?:\s++[[qstring:useragent]](?:\s++[[qstring:cookie]])?+)?+)?[[all:other]]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [access-request]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = "\s*+[[reqstr:method]]?(?:\s++[[bc_uri]](?:\s++[[reqstr:version]])*)?\s*+"
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [ad-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = true
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<_KEY_1>[\w-]+)=(?<_VAL_1>[^\r\n]*)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [all]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .*
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [all_lazy]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .*?
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [alnums]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = [a-zA-Z0-9]+
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [alphas]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = [a-zA-Z]+
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [bc_domain]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<domain>\w++://[^/\s"]++)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [bc_uri]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<uri>[[bc_domain:uri_]]?+(?<uri_path>[[uri_root]]?[[uri_seg]]*(?<file>[^\s\?/]+)?)(?:\?(?<uri_query>[^\s]*))?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [bracket-space]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \[(\S+) (.*?)\]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [browser]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?i:(?<![a-z])(netscape|mozilla|firefox|ie)(?![a-z]))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [cisco-codes]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = product::$1 code::$2 severity::$3
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = : (?i)%([a-z0-9_]+)-(?:[a-z0-9_]+-)?([0-7])-([a-z0-9_]+):
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [colon-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<= )([A-Za-z]+): ?((0x[A-F\d]+)|\d+)(?= |\n|$)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [colon-line]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^(\w+)\s*:[ \t]*(.*?)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [db2]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ([A-Z]+) *: (.*?)(?=\n|$| +[A-Z]+ *:)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [default]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [digits]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \d+
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf [dmc_assets]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf fields_list = peerURI serverName host machine search_group
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf filename = assets.csv
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf [dmc_forwarder_assets]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf fields_list = guid, hostname, forwarder_type, version, arch, os, status, last_connected, sum_kb, avg_tcp_kbps_sparkline, avg_tcp_kbps, avg_tcp_eps
+/opt/splunk/etc/apps/splunk_monitoring_console/default/transforms.conf filename = dmc_forwarder_assets.csv
+/opt/splunk/etc/system/default/transforms.conf                         [dnslookup]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         external_cmd = external_lookup.py clienthost clientip
+/opt/splunk/etc/system/default/transforms.conf                         fields_list = clienthost,clientip
+/opt/splunk/etc/system/default/transforms.conf                         [email]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?:(?<!\w)(\w[\w\-\.]+@\w[\w\-\.]+\.[a-z]{1,4}))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [exceptionclass]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \sat ([\w\.$_-]+)\(
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [extract_spent]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \s(?P<spent>\d+(\.\d+)?)ms$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [field_extraction]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ([a-zA-Z0-9_\.]+)=\"?([a-zA-Z0-9_\.-]+)
+/opt/splunk/etc/system/default/transforms.conf                         REPEAT_MATCH = true
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = true
+/opt/splunk/etc/system/default/transforms.conf                         [filetype]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?:[\w_]\.([A-Za-z]{2}\w)(?!\w))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [float]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \d*\.\d+|[[int]]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    [geo_attr_countries]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    filename = geo_attr_countries.csv
+/opt/splunk/etc/apps/search/default/transforms.conf                    [geo_attr_us_states]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    filename = geo_attr_us_states.csv
+/opt/splunk/etc/apps/search/default/transforms.conf                    [geo_countries]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    external_type = geo
+/opt/splunk/etc/apps/search/default/transforms.conf                    filename = geo_countries.kmz
+/opt/splunk/etc/apps/search/default/transforms.conf                    [geo_hex]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    external_type = geo_hex
+/opt/splunk/etc/apps/search/default/transforms.conf                    [geo_us_states]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/search/default/transforms.conf                    external_type = geo
+/opt/splunk/etc/apps/search/default/transforms.conf                    filename = geo_us_states.kmz
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_changed_files]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            MV_ADD = true
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = \s(?<changed_file>[^\n]+?) +\| [^\n]+
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            SOURCE_KEY = change_list
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_changed_text]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = (?s)git log \-\-stat=\d+,\d+ \-1.+?OUTPUT:commit (?<change_list>.+?)\n \d+ file
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_commit_hash]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = OUTPUT:commit (?<commit_hash>\S+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_commit_msg]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = git commit \-\-amend \-m (?<commit_message>[^\r\n]+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_repo_size]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = repo_size=(?<repo_size>\d+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_runtime]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = runtime=(?<runtime>[\d\.]+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_status]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = status=(?<status>\d)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            [git_status_codes]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/git_for_splunk/default/transforms.conf            REGEX = (?s)EXITCODE: (?<status_check_status>\d+)(?:.+?EXITCODE: (?<status_add_files>\d+))?(?:.+?EXITCODE: (?<status_commit_files>\d+))?(?:.+?EXITCODE: (?<status_change_message>\d+))?(?:.+?EXITCODE: (?<status_commit_details>\d+))?(?:.+?EXITCODE: (?<status_push>\d+))?
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [guid-to-translate]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = true
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<guid_to_trans>\w{8}-\w{4}-\w{4}-\w{4}-\w{12})
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [int]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 0x[a-fA-F0-9]+|\d+
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [introspection_disk_objects_log_clone]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   CLONE_SOURCETYPE = splunk_intro_disk_objects
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   REGEX = (.)
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   SOURCE_KEY = MetaData:Source
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [introspection_disk_objects_metric_name]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   INGEST_EVAL = metric_name = "spl.intr.disk_objects"
+.case(
+        isnotnull( component ), ".".component
+        , 1==1, ""
+)
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [introspection_resource_usage_log_clone]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   CLONE_SOURCETYPE = splunk_intro_resource_usage
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   REGEX = (.)
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   SOURCE_KEY = MetaData:Source
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [introspection_resource_usage_metric_name]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   INGEST_EVAL = metric_name = "spl.intr.resource_usage"
+.case(
+        isnotnull( component ), ".".component,
+        1==1, ""
+)
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [ip]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?:(?<!\d)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?!\d))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [ipv4]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<ip>[[octet]](?:\.[[octet]]){3})(?::[[int:port]])?
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [language]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?i:(?<![a-z])(php|java|python|c\+\+|perl)(?![a-z]))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [log4-severity]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = severity::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .*?([A-Z]+) [\w\.]+ \-
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [loglevel]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (FATAL|ERROR|WARN|INFO|DEBUG|TRACE)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [loglevel-weblogic]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = loglevel::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = #+<\w+ \d+, \d+ \d+:\d+:\d+ \w+ \w+> <(\w+)>
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:introspection_disk_objects]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-BLACKLIST-DIMS = datetime, *data.top_*, *data.args
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _NUMS_EXCEPT_ *data.top_*
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:introspection_resource_usage]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-BLACKLIST-DIMS = datetime
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _NUMS_EXCEPT_ *data.splunk_version, *data.pid, *data.ppid, *data.interval
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:log2metrics_default_csv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _ALLNUMS_
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:log2metrics_default_json]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _ALLNUMS_
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:log2metrics_default_keyvalue]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _ALLNUMS_
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metric-schema:metrics_dot_log]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   METRIC-SCHEMA-MEASURES = _NUMS_EXCEPT_ destPort,sourcePort
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metrics_index_redirect]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   DEST_KEY = _MetaData:Index
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   FORMAT = _metrics
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metrics_log_clone]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   CLONE_SOURCETYPE = splunk_metrics_log
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   REGEX = (.)
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   SOURCE_KEY = MetaData:Source
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   [metrics_log_metric_name]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/apps/splunk_internal_metrics/default/transforms.conf   INGEST_EVAL = metric_name="spl.mlog.".case(
+    group IN ( "subtask_seconds",
+               "subtask_counts",
+               "search_concurrency",
+               "deploy-server",
+               "thruput",
+               "jobs",
+               "search_health_metrics",
+               "tailingprocessor" ) AND isnotnull(name),
+            group.".".name,
+    group == "pipeline" AND name == "indexerpipe" AND processor == "indexer",
+            group.".".processor,
+    group == "dutycycle" AND name == "misc",
+            group.".".name,
+    group == "search_concurrency" AND isnotnull(user),
+            group.".per_user",
+    group == "bundles_downloads" AND isnotnull(baseline_count),
+            group.".baseline",
+    group == "bundles_downloads" AND isnotnull(delta_count),
+            group.".delta",
+    isnotnull(group), group,
+    1 == 1, "nullgroup"
+)
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [novell-groupwise-arrival]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _meta
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $0 msgtype::$1 originuserid::$2 messageid::$3 filename::$4 originidomain::$5 origindomain::$6 originpostoffice::$7  previoushop::$8 size::$9 priority::$10 targapp::$11 reportstatus::$12 reportdestination::$13 destination::$14
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ARR ([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),(.*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [novell-groupwise-queue]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _meta
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $0 filename::$1 nexthoptype::$2 nexthopname::$3 destnum::$4
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = QUE ([^,]*),([^,]*),([^,]*),(.*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [novell-groupwise-transfer]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _meta
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $0 peername::$1 filename::$2 size::$3 sendtime::$4
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = QUE ([^,]*),([^,]*),([^,]*),([^,]*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [nspaces]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \S+
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [num-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ([A-Za-z_][\w_]*)[=:\s]+((0x[A-F\d]+)|[+-]?[\d.]+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [octet]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?:2(?:5[0-5]|[0-4][0-9])|[0-1][0-9][0-9]|[0-9][0-9]?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [os]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?i:(?<![a-z])(mac|windows|linux)(?![a-z]))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [perfmon-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DELIMS = "\n","="
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [qstring]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = "(?<>[^"]*+)"
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [registry]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DELIMS = "\n","=:"
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [remote_searches_extractions_starting]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[^=\n]*search_id=(?P<search_id>[^,]+),\s+\w+=(?P<server>[^,]+),\s+\w+_\w+=(?P<active_searches>[^,]+).*?(search\=\')(?<search>.+)\ *?(', remote_ttl?)=(?P<remote_ttl>.+).*?(, apiStartTime\=\')(?<apiStartTime>.+)\ *?(', apiEndTime\=\')(?<apiEndTime>.+)\ *?(', savedsearch_name?)="(?P<savedsearch_name>[^"]*)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [remote_searches_extractions_terminated]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[^=\n]*search_id=(?P<search_id>[^,]+),\s+\w+=(?P<server>[^,]+),\s+\w+_\w+=(?P<active_searches>[^,]+),\s+\w+=(?P<elapsedTime>[^,]+).*?(search\=\')(?<search>.+)\ *?(', savedsearch_name?)="(?P<savedsearch_name>[^"]*)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [reqstr]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = [^\s"]++
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [sbstring]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \[(?<>[^\]]*+)\]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [sendToTCP]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = queue
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = tcpOutQueue
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [send_to_nullqueue]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = queue
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = nullQueue
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [sendmail-extractions]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = process::sendmail pid::$1 qid::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = sendmail\[(\d+)\]: (\w+):
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [sendmail-pid]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = pid::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \[(\d+)\]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [sendmail-qid]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = qid::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = sendmail\[\d+\]: (\w+):
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [set_sourcetype_to_stash]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = MetaData:Sourcetype
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = sourcetype::stash
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [simple_uri]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<uri>(?<uri_path>[^\s\?"]++)(?:\\?(?<uri_query>[^\s"]+))?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [simple_url]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<url>\w++://(?<domain>[a-zA-Z0-9\-.:]++)(?:/[^\s"]*)?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [splunk-access-extractions]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[[nspaces:clientip]]\s++[[nspaces:ident]]\s++[[nspaces:user]]\s++[[sbstring:req_time]]\s++[[access-request]]\s++[[nspaces:status]]\s++[[nspaces:bytes]](?:\s++"(?<referer>[[bc_domain:referer_]]?+[^"]*+)"(?:\s++[[qstring:useragent]](?:\s++[[nspaces:vhost]])?(?:\s++[[nspaces:requestid]])?)?)?[[all:other]]
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [splunk-service-extractions]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?i)^(?:[^ ]* ){2}(?P<log_level>[^\s]*)\s+\[(?P<requestid>\w+)]\s+(?P<component>[^ ]+):(?P<line>\d+) - (?P<message>.+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [splunk_help]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _MetaData:Index
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = help
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [splunk_index_history]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _MetaData:Index
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = history
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = .
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [splunkd-disassembler]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _meta
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $0 level::$1 component::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^\S+\s\S+\s+(\S+)\s+(\S+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      [splunkversioncontrol_globalexclusionlist]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      batch_index_query = 0
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      case_sensitive_match = 1
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      filename = splunkversioncontrol_globalexclusionlist.csv
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      [splunkversioncontrol_restorelist]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      batch_index_query = 0
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      case_sensitive_match = 1
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      filename = splunkversioncontrol_restorelist.csv
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      [splunkversioncontrol_taglist]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      batch_index_query = 0
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      case_sensitive_match = 1
+/opt/splunk/etc/apps/SplunkVersionControl/default/transforms.conf      filename = splunkversioncontrol_taglist.csv
+/opt/splunk/etc/system/default/transforms.conf                         [stash_extract]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = false
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = false
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DELIMS = ",", "="
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = true
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [strip-winevt-linebreaker]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?s)^(.*)---splunk-wevt-end-of-event---
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-extractions]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = process::$1 pid::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \s([^\s\[]+)(?:\[(\d+)\])?:\s
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-header-stripper-ts]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[A-Z][a-z]+\s+\d+\s\d+:\d+:\d+\s(.*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-header-stripper-ts-host]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[A-Z][a-z]+\s+\d+\s\d+:\d+:\d+\s[^\s]*\s(.*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-header-stripper-ts-host-proc]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[A-Z][a-z]+\s+\d+\s\d+:\d+:\d+\s.*?:\s(.*)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-host]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = MetaData:Host
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = host::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = :\d\d\s+(?:\d+\s+|(?:user|daemon|local.?)\.\w+\s+)*\[?(\w[\w\.\-]{2,})\]?\s
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-host-full]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = MetaData:Host
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = host::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ^[^\:]*\d\d\:\d\d\:\d\d[^\:]*?\s((\d+\.\d+\.\d+\.\d+)|(\w[\w\.\-]{2,})(?=\s+[^\s\:]+\:))
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [syslog-process]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = process::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \(([a-zA-Z0-9_]+)\)\[\d+\]:
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [tcpdump-endpoints]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = src_ip::$1 src_port::$2 dest_ip::$3 dest_port::$4
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (\d+\.\d+\.\d+\.\d+):(\d+) -> (\d+\.\d+\.\d+\.\d+):(\d+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [uri]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<uri>(?:\w++://(?<uri_domain>[^/\s]++))?(?<uri_path>(?<uri_root>/+(?:[^\s\?;=/]*+/+)*)(?<uri_file>[^\s\?;=?/]*+))(?:\?(?<uri_query>[^\s"]+))?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [uri_root]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = /++(?<root>(?:\\"|[^\s\?/"])++)/++
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [uri_seg]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?:\\"|[^\s\?/"])*+/++
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [url]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?<url>[[alphas:proto]]://(?<domain>[a-zA-Z0-9\-.:]++)(?<uri>/[^\s"]*)?)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [was-trlog-code]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = code::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = ] ([a-fA-F0-9]{8})
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [weblogic-code]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = code::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = <BEA-([0-9]+)>
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [wel-col-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = $1::$2
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = true
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = \n([^:\n\r]+):[ \t]++([^\n]*)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = Message
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [wel-eq-kv]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DELIMS = "\n","="
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = true
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = 
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _pre_msg
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [wel-message]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = false
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = 
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = 
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?sm)^(?<_pre_msg>.+)\nMessage=(?<Message>.+)$
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [wmi-host]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = MetaData:Host
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = host::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?m)ComputerName=(.+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False
+/opt/splunk/etc/system/default/transforms.conf                         [wmi-override-host]
+/opt/splunk/etc/system/default/transforms.conf                         CAN_OPTIMIZE = True
+/opt/splunk/etc/system/default/transforms.conf                         CLEAN_KEYS = True
+/opt/splunk/etc/system/default/transforms.conf                         DEFAULT_VALUE = 
+/opt/splunk/etc/system/default/transforms.conf                         DEPTH_LIMIT = 1000
+/opt/splunk/etc/system/default/transforms.conf                         DEST_KEY = MetaData:Host
+/opt/splunk/etc/system/default/transforms.conf                         FORMAT = host::$1
+/opt/splunk/etc/system/default/transforms.conf                         KEEP_EMPTY_VALS = False
+/opt/splunk/etc/system/default/transforms.conf                         LOOKAHEAD = 4096
+/opt/splunk/etc/system/default/transforms.conf                         MATCH_LIMIT = 100000
+/opt/splunk/etc/system/default/transforms.conf                         MV_ADD = False
+/opt/splunk/etc/system/default/transforms.conf                         REGEX = (?m)wmi_hostname=(.+)
+/opt/splunk/etc/system/default/transforms.conf                         SOURCE_KEY = _raw
+/opt/splunk/etc/system/default/transforms.conf                         WRITE_META = False

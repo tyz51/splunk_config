@@ -1,0 +1,184 @@
+/opt/splunk/etc/system/default/inputs.conf                             [SSL]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             allowSslRenegotiation = true
+/opt/splunk/etc/system/default/inputs.conf                             cipherSuite = ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
+/opt/splunk/etc/system/default/inputs.conf                             ecdhCurves = prime256v1, secp384r1, secp521r1
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             sslQuietShutdown = false
+/opt/splunk/etc/system/default/inputs.conf                             sslVersions = tls1.2
+/opt/splunk/etc/system/default/inputs.conf                             [batch:///opt/splunk/var/run/splunk/search_telemetry/*search_telemetry.json]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             crcSalt = <SOURCE>
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _introspection
+/opt/splunk/etc/system/default/inputs.conf                             log_on_completion = 0
+/opt/splunk/etc/system/default/inputs.conf                             move_policy = sinkhole
+/opt/splunk/etc/system/default/inputs.conf                             sourcetype = search_telemetry
+/opt/splunk/etc/system/default/inputs.conf                             [batch:///opt/splunk/var/spool/splunk]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             crcSalt = <SOURCE>
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             move_policy = sinkhole
+/opt/splunk/etc/system/default/inputs.conf                             [batch:///opt/splunk/var/spool/splunk/...stash_new]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             crcSalt = <SOURCE>
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             move_policy = sinkhole
+/opt/splunk/etc/system/default/inputs.conf                             queue = stashparsing
+/opt/splunk/etc/system/default/inputs.conf                             sourcetype = stash_new
+/opt/splunk/etc/system/default/inputs.conf                             [blacklist:/opt/splunk/etc/auth]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             [blacklist:/opt/splunk/etc/passwd]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             [fschange:/opt/splunk/etc]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             delayInMills = 100
+/opt/splunk/etc/system/default/inputs.conf                             filesPerDelay = 10
+/opt/splunk/etc/system/default/inputs.conf                             followLinks = false
+/opt/splunk/etc/system/default/inputs.conf                             fullEvent = false
+/opt/splunk/etc/system/default/inputs.conf                             hashMaxSize = -1
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             pollPeriod = 600
+/opt/splunk/etc/system/default/inputs.conf                             recurse = true
+/opt/splunk/etc/system/default/inputs.conf                             sendEventMaxSize = -1
+/opt/splunk/etc/system/default/inputs.conf                             signedaudit = true
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  [gitforsplunk://git]
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  btool_conf_files = inputs, indexes, fields, props, limits, outputs, props, transforms, savedsearches, macros
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  disabled = 1
+host = $decideOnStartup
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  include_btool_output = 1
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  index = _internal
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  interval = 10
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                python.version = python3
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  remote_push = 0
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  repository_directory = /opt/splunk/etc/
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                sourcetype = gitforsplunk
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                start_by_shell = false
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  working_directory = /opt/splunk/etc/
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  [gitforsplunk://git_test]
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  btool_conf_files = inputs, indexes, fields, props, limits, outputs, props, transforms, savedsearches, macros
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  disabled = 0
+host = $decideOnStartup
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  include_btool_output = 1
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  index = _internal
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  interval = 10
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                python.version = python3
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  remote_push = 0
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  repository_directory = .git/
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                sourcetype = gitforsplunk
+/opt/splunk/etc/apps/git_for_splunk/default/inputs.conf                start_by_shell = false
+/opt/splunk/etc/apps/git_for_splunk/local/inputs.conf                  working_directory = etc/
+/opt/splunk/etc/apps/splunk_httpinput/local/inputs.conf                [http]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              ackIdleCleanup = true
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              allowSslCompression = true
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              allowSslRenegotiation = true
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              dedicatedIoThreads = 2
+/opt/splunk/etc/apps/splunk_httpinput/local/inputs.conf                disabled = 0
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              enableSSL = 1
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              maxSockets = 0
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              maxThreads = 0
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              port = 8088
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              sslVersions = *,-ssl2
+/opt/splunk/etc/apps/splunk_httpinput/default/inputs.conf              useDeploymentServer = 0
+/opt/splunk/etc/system/default/inputs.conf                             [monitor:///opt/splunk/etc/splunk.version]
+/opt/splunk/etc/system/default/inputs.conf                             _TCP_ROUTING = *
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _internal
+/opt/splunk/etc/system/default/inputs.conf                             sourcetype = splunk_version
+/opt/splunk/etc/apps/introspection_generator_addon/default/inputs.conf [monitor:///opt/splunk/var/log/introspection]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/apps/introspection_generator_addon/default/inputs.conf index = _introspection
+/opt/splunk/etc/system/default/inputs.conf                             [monitor:///opt/splunk/var/log/splunk]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _internal
+/opt/splunk/etc/system/default/inputs.conf                             [monitor:///opt/splunk/var/log/splunk/license_usage_summary.log]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _telemetry
+/opt/splunk/etc/system/default/inputs.conf                             [monitor:///opt/splunk/var/log/splunk/splunk_instrumentation_cloud.log*]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _telemetry
+/opt/splunk/etc/system/default/inputs.conf                             sourcetype = splunk_cloud_telemetry
+/opt/splunk/etc/system/default/inputs.conf                             [monitor:///opt/splunk/var/log/watchdog/watchdog.log*]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = _internal
+/opt/splunk/etc/system/default/inputs.conf                             [script]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             interval = 60.0
+/opt/splunk/etc/system/default/inputs.conf                             start_by_shell = true
+/opt/splunk/etc/apps/introspection_generator_addon/default/inputs.conf [script:///opt/splunk/etc/apps/introspection_generator_addon/bin/collector.path]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/apps/introspection_generator_addon/default/inputs.conf interval = 0
+/opt/splunk/etc/apps/introspection_generator_addon/default/inputs.conf sourcetype = splunk_resource_usage__internal
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        [script:///opt/splunk/etc/apps/splunk_instrumentation/bin/instrumentation.py]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        disabled = false
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        index = _telemetry
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        interval = 0 * * * *
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        passAuth = splunk-system-user
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        source = instrumentation_scripted_input
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        sourcetype = splunk_telemetry_log
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        [script:///opt/splunk/etc/apps/splunk_instrumentation/bin/on_splunk_start.py]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        disabled = false
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        interval = -1
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        passAuth = splunk-system-user
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        [script:///opt/splunk/etc/apps/splunk_instrumentation/bin/schedule_delete.py]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        disabled = false
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        interval = 0 0 * * *
+/opt/splunk/etc/apps/splunk_instrumentation/default/inputs.conf        passAuth = splunk-system-user
+/opt/splunk/etc/apps/splunk_monitoring_console/default/inputs.conf     [script:///opt/splunk/etc/apps/splunk_monitoring_console/bin/dmc_config.py]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/apps/splunk_monitoring_console/default/inputs.conf     interval = -1
+/opt/splunk/etc/apps/splunk_monitoring_console/default/inputs.conf     passAuth = splunk-system-user
+/opt/splunk/etc/system/default/inputs.conf                             [splunktcp]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             acceptFrom = *
+/opt/splunk/etc/system/default/inputs.conf                             connection_host = ip
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             route = has_key:_replicationBucketUUID:replicationQueue;has_key:_dstrx:typingQueue;has_key:_linebreaker:indexQueue;absent_key:_linebreaker:parsingQueue
+/opt/splunk/etc/system/local/inputs.conf                               [splunktcp://9997]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/local/inputs.conf                               disabled = 0
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             [tcp]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             acceptFrom = *
+/opt/splunk/etc/system/default/inputs.conf                             connection_host = dns
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
+/opt/splunk/etc/system/default/inputs.conf                             [udp]
+/opt/splunk/etc/system/default/inputs.conf                             _rcvbuf = 1572864
+/opt/splunk/etc/system/default/inputs.conf                             connection_host = ip
+/opt/splunk/etc/system/default/inputs.conf                             host = $decideOnStartup
+/opt/splunk/etc/system/default/inputs.conf                             index = default
