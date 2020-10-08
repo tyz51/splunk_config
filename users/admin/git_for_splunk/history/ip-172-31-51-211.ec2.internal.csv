@@ -495,3 +495,15 @@ sid,search,"splunk_server","_time","is_realtime",provenance,"api_et","api_lt","e
 |  fields - percent
 | rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602158480.294188",0,"UI:Dashboard:status","1602154860.000000000","1602158480.000000000",1,1602158480,0,search3,1,"1602154860.000000000","1602158480.000000000",completed,"0.124",,,,,,,,,,,,,,,,,
 "admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602158484.231","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602158457 latest=1602158458","ip-172-31-51-211.ec2.internal","1602158484.376471",0,"UI:Dashboard:status","1602154860.000000000","1602158484.000000000",1,1602158484,1,search2,1,"1602158457.000000000","1602158458.000000000",completed,"0.063",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602158559.232","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602158559.222565",0,"UI:Dashboard:status","1602154920.000000000","1602158559.000000000",4,1602158559,4,search1,4,"1602154920.000000000","1602158559.000000000",completed,"0.188",,,,,,,,,,,,,,,,,
