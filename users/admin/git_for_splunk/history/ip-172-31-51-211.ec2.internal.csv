@@ -333,10 +333,29 @@ sid,search,"splunk_server","_time","is_realtime",provenance,"api_et","api_lt","e
     [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
 | eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
 | table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
-| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145459.641530",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145459.641530",1,"UI:Dashboard:status",,,0,1602145459,0,search1,6,,,canceled,"43.14",,,,,,,,,,,,,,,,,
 "rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_rt_1602145459.186","search sourcetype=gitforsplunk index=_internal 
 |  top 20 changed_file 
 |  fields - percent
-| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145459.662902",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145472.187","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145454 latest=1602145455","ip-172-31-51-211.ec2.internal","1602145472.865690",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145481.188","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145462 latest=1602145463","ip-172-31-51-211.ec2.internal","1602145481.523282",1,"UI:Dashboard:status",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145459.662902",1,"UI:Dashboard:status",,,6,1602145459,0,search3,6,,,canceled,"43.118",,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145472.187","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145454 latest=1602145455","ip-172-31-51-211.ec2.internal","1602145472.865690",1,"UI:Dashboard:status",,,0,1602145472,0,search2,1,,,canceled,"9.308",,,,,,,,,,,,,,,,,
+"rt_admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_rt_1602145481.188","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145462 latest=1602145463","ip-172-31-51-211.ec2.internal","1602145481.523282",1,"UI:Dashboard:status",,,0,1602145481,0,search2,2,,,canceled,"21.297",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search1_1602145513.190","search sourcetype=gitforsplunk index=_internal 
+| eval time = strftime(_time, ""%Y-%m-%d %H:%M"") 
+| eval etime1 = _time
+| eval etime2 = _time + 1
+| rex ""(?s)git commit \-m auto.*?(?<no_changes1>no changes added to commit)""
+| rex ""EXITCODE: 1[\s*](?<no_changes2>No changes)""
+| sort - _time
+| foreach status_* 
+    [eval <<MATCHSTR>> = case(isnull(<<FIELD>>), null(), <<FIELD>>==0, ""OK"", true(), ""Error"")]
+| eval commit_files = if((isnotnull(no_changes1) OR isnotnull(no_changes2)) AND status_commit_files == 1, ""No Changes"", commit_files) 
+| table etime1 etime2 time host commit_message runtime check_status add_files commit_files change_message commit_details push 
+| rename time as Time host as Host commit_message as ""Commit message"" runtime as Duration check_status as ""Check status"" add_files as ""Add files"" commit_files as ""Commit files"" change_message as ""Update message"" commit_details as ""Show details"" push as ""Push""","ip-172-31-51-211.ec2.internal","1602145513.585551",0,"UI:Dashboard:status","1601539200.000000000","1602145513.000000000",75,1602145513,75,search1,75,"1601539200.000000000","1602145513.000000000",completed,"0.447",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search3_1602145513.189","search sourcetype=gitforsplunk index=_internal 
+|  top 20 changed_file 
+|  fields - percent
+| rename changed_file as ""Filename"" count as Count","ip-172-31-51-211.ec2.internal","1602145513.586855",0,"UI:Dashboard:status","1601539200.000000000","1602145513.000000000",75,1602145513,1,search3,75,"1601539200.000000000","1602145513.000000000",completed,"0.437",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602145524.191","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145481 latest=1602145482","ip-172-31-51-211.ec2.internal","1602145524.791736",0,"UI:Dashboard:status","1601539200.000000000","1602145524.000000000",1,1602145524,1,search2,1,"1602145481.000000000","1602145482.000000000",canceled,"0.063",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602145528.192","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602085857 latest=1602085858","ip-172-31-51-211.ec2.internal","1602145528.987534",0,"UI:Dashboard:status","1601539200.000000000","1602145528.000000000",1,1602145528,1,search2,1,"1602085857.000000000","1602085858.000000000",canceled,"0.064",,,,,,,,,,,,,,,,,
+"admin__admin_Z2l0X2Zvcl9zcGx1bms__search2_1602145532.193","search sourcetype=gitforsplunk index=_internal host=ip-172-31-51-211.ec2.internal earliest=1602145491 latest=1602145492","ip-172-31-51-211.ec2.internal","1602145532.497701",0,"UI:Dashboard:status","1601539200.000000000","1602145532.000000000",1,1602145532,1,search2,1,"1602145491.000000000","1602145492.000000000",completed,"0.062",,,,,,,,,,,,,,,,,
